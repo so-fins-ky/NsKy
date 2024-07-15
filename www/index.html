@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+   <!--  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+<head>
+    <!-- Seguridad y compatibilidad-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- temas y fuentes -->
+    <meta name="color-scheme" content="light dark">
+	 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- titulo -->
+    <title>Diario de una coquette</title>
+    <!-- libreria framework7 -->
+    <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css">
+    <!-- iconos -->
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- hojas de estilo-->
+    <link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/magic.css">
+	<!-- //fuentes de google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Statusbar overlay -->
+			<div class="statusbar"></div>
+					
+        <!-- Your main view, should have "view-main" class -->
+			<div class="view view-main">
+       
+					<!-- Top Navbar -->
+				
+    
+				<!-- Initial Page, "data-name" contains page name -->
+				<div data-name="index" class="page">
+				 <div class="fab fab-left-bottom">
+						<a>
+						  <img src="img/ajustes.png" class="col" width="100%" id="config">
+						</a> 
+				</div>
+					 
+					<!-- Scrollable page content -->
+					<div class="page-content">
+						<div class="">
+							<div>
+							<img src="img/logoApp.png" class="col" width="100%">
+							</div>
+							<div class="row">
+							<img src="img/11.gif" class="col pad10"  id="btnVinculos">
+							<img src="img/12.gif" class="col pad10" id="btnDiario">
+							<img src="img/13.gif" class="col pad10" id="btnToDo">
+							<img src="img/14.gif" class="col pad10" id="btnSuenos">
+							</div>
+							<h1><p id="frasesRandom">"A la verga no me aguito sobres"</p><i class="f7-icons" id="create">pencil</i></h1>
+							<div id="editorFrases" class="invisible">
+										  <div class="block-header" >Escribe una frase para motivarte :) </div>
+										  <div class="text-editor text-editor-init" data-placeholder="Enter text..."
+											data-buttons='["bold", "italic", "underline", "strikeThrough"]' data-mode="popover"
+											style="--f7-text-editor-height: 150px" >
+											<div class="text-editor-content" id="boxTextoFrase" contenteditable ></div>
+										  </div>
+	                                       <button class="button button-fill button-round" id="btnOkFrase">Ok</button>
+	  
+	                        </div>
+							<div align="right"><h2>By Sofinsky</h2></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div> 
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/framework7-bundle.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js">  </script>
+	
+
+	
+</body>
+
+</html>
